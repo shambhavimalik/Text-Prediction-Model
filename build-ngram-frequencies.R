@@ -5,17 +5,12 @@ library(stringr)
 library(quanteda)
 library(data.table)
 
-# ------------------------------------------------------------------------------
-# Prepare environment
-# ------------------------------------------------------------------------------
 
+# Prepare environment
 rm(list = ls(all.names = TRUE))
 setwd("C:/Users/Shambhavi Malik/Documents/R/Data-Science-using-R/Natural Language Processing/coursera-data-science-capstone-master/shiny-app")
 
-# ------------------------------------------------------------------------------
 # Download, unzip and load the training data
-# ------------------------------------------------------------------------------
-
 trainURL <- "https://d396qusza40orc.cloudfront.net/dsscapstone/dataset/Coursera-SwiftKey.zip"
 trainDataFile <- "data/Coursera-SwiftKey.zip"
 
@@ -60,10 +55,8 @@ print(paste0("Number of lines per file (total):   ", format(length(blogs) +
 # remove variables no longer needed to free up memory
 rm(con, trainURL, trainDataFile, blogsFileName, newsFileName, twitterFileName)
 
-# ------------------------------------------------------------------------------
-# Prepare the data
-# ------------------------------------------------------------------------------
 
+# Prepare the data
 # set seed for reproducability
 set.seed(660067)
 
@@ -108,10 +101,8 @@ print(paste0("Number of words: ", format(sampleDataWords, big.mark = ",")))
 rm(blogs, news, twitter, sampleBlogs, sampleNews, sampleTwitter)
 rm(removeOutliers)
 
-# ------------------------------------------------------------------------------
-# Clean the data
-# ------------------------------------------------------------------------------
 
+# Clean the data
 # load bad words file
 badWordsURL <- "http://www.idevelopment.info/data/DataScience/uploads/full-list-of-bad-words_text-file_2018_07_30.zip"
 badWordsFile <- "data/full-list-of-bad-words_text-file_2018_07_30.txt"
@@ -164,16 +155,11 @@ close(con)
 # remove variables no longer needed to free up memory
 rm(badWordsURL, badWordsFile, con, sampleDataFileName, profanity)
 
-# ------------------------------------------------------------------------------
-# Build corpus
-# ------------------------------------------------------------------------------
 
+# Build corpus
 corpus <- corpus(sampleData)
 
-# ------------------------------------------------------------------------------
 # Build n-gram frequencies
-# ------------------------------------------------------------------------------
-
 getTopThree <- function(corpus) {
     first <- !duplicated(corpus$token)
     balance <- corpus[!first,]
