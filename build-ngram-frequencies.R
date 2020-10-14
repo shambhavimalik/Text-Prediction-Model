@@ -104,7 +104,7 @@ rm(removeOutliers)
 
 # Clean the data
 # load bad words file
-badWordsURL <- "http://www.idevelopment.info/data/DataScience/uploads/full-list-of-bad-words_text-file_2018_07_30.zip"
+badWordsURL <- "https://www.freewebheaders.com/download/files/full-list-of-bad-words_text-file_2018_07_30.zip"
 badWordsFile <- "data/full-list-of-bad-words_text-file_2018_07_30.txt"
 if (!file.exists('data')) {
     dir.create('data')
