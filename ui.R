@@ -5,8 +5,8 @@ library(dplyr)
 library(tm)
 
 shinyUI(
-    navbarPage("Next Word Prediction",
-               theme = shinytheme("spacelab"),
+    navbarPage("Text Prediction",
+               theme = shinytheme("flatly")
                tabPanel("Home",
                         fluidPage(
                             titlePanel("Home"),
@@ -32,12 +32,11 @@ shinyUI(
                         )
                ),
                tabPanel("About",
-                        h3("About Next Word Prediction"),
+                        h3("About Text Prediction"),
                         br(),
-                        div("Next Word Prediction is a Shiny app that uses a text
+                        div("Text Prediction is a Shiny app that uses a text
                             prediction algorithm to predict the next word(s) (upto 3) that the user is likely to type
                             based on text entered.",
-                            br(),
                             br(),
                             "The predicted next word will be shown when the app
                             detects that you have finished typing one or more
