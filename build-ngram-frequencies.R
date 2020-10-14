@@ -8,7 +8,7 @@ library(data.table)
 
 # Prepare environment
 rm(list = ls(all.names = TRUE))
-setwd("C:/Users/Shambhavi Malik/Documents/R/Data-Science-using-R/Natural Language Processing/coursera-data-science-capstone-master/shiny-app")
+setwd("C:/Users/Shambhavi Malik/Documents/R/Text_Prediction")
 
 # Download, unzip and load the training data
 trainURL <- "https://d396qusza40orc.cloudfront.net/dsscapstone/dataset/Coursera-SwiftKey.zip"
